@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\BandbController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\GuitarsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +14,18 @@ use App\Http\Controllers\GuitarsController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('/about', [HomeController::class, 'about'])->name('home.about');
-Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
-Route::get('/info', [HomeController::class, 'info'])->name('home.info');
-
-Route::resource('guitars', GuitarsController::class);
-
-Route::resource('bizandbreakfast', BandbController::class);
-
-
-Route::get('/store', function () {
-    
-    $category = strip_tags(request('category')); 
-    return 'you are viewing' . ($category);
+Route::get('/', function () {
+    return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
