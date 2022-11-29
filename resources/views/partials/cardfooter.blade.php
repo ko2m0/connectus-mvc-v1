@@ -1,3 +1,9 @@
-<footer class="footer unus-bg" style="border:1px dashed coral">
-    <p>Copyright 2022 Connectus</p>
-</footer>
+<footer class="footerSection">
+    <div class="footer">
+      <p>Copyright &copy; 2022 ConneXtus</p>
+      <!--<small>Privacy Policy</small>
+      <small>Terms & Conditions</small>
+      
+      <a href="#" class="go-up"></a> -->
+    </div>
+  </footer>

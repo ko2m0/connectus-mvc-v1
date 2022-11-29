@@ -4,11 +4,12 @@
 @section('content')
 
     <!-- START OF CONNECTUS APP -->
-    <main>
-        <div class="container">
-            <div class="container-flex">
-                <div class="svgProfileMask">
-                    <svg viewBox="0 0 200 300" width="70" height="100">
+    <main class="mainSection">
+        <div class="mainSectionContent content p-hck">
+            <div class="container P-2vh">
+                <div class="container-flex">
+                    <div class="svgProfileMask" id="InfoBtn">
+                        <svg viewBox="0 0 200 300" width="70" height="100">
                         <defs>
                             <clipPath id="clip">
                                 <circle cx="100" cy="100" r="100" />
@@ -18,6 +19,7 @@
                             xlink:href="{{$bandb_profile['profile_pic']}}"
                             clip-path="url(#clip)" />
                     </svg>
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" style="position:absolute; top: 0;"  xmlns="https://www.w3.org/2000/svg"><rect x="0" fill="none" width="24" height="24"/><g fill="#ff9900"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></g></svg>
     
                 </div>
                 <div class="flexxer flexxer-column align-start just-start" style="padding: 0 10px">
@@ -34,12 +36,12 @@
             <div class="clear"></div>
         </div>
         <!-- -->
-        <div class="container">
+        <div class="container P-2vh">
             <div class="one-third">
             <a href="sms:{{$bandb_profile['profile_phonenumber']}}">   
             <!--<a href="https://wa.me//?text=Hello%20I%20would%20like%20to%20contact%20you">-->
                     <div class="k-btn">
-                        <img src="https://connextusnow.com/images/svg/msg_icon.svg" alt="Message">
+                        <img src="/images/svg/msg_icon.svg" alt="Message">
                     </div>
                     <p class="center-text uppercase unuscolor-txt bold">Message</p>
                 </a>
@@ -58,44 +60,56 @@
             </div>
             <div class="clear"></div>
         </div>
+
         <!-- -->
-        <div class="container">
+        <div class="container P-2vh">
             <div>
         <a href="tel:{{$bandb_profile['profile_phonenumber']}}" class="button-big duo-bg phone-btn">
-        <img src="http://www.connextusnow.com/connextus_app/img/Connextus_LogoSmall4web.png" alt="" width="45">
-        CALL</a>
+            <div class="flexxer just-center">
+                <div class="callbtn_icon">
+                    <img src="/images/ux/Connextus_call_phoneIcon1.svg" alt="Call" width="30">
+                </div>
+                <div class="callbtn_icon">
+                    <img src="/images/ux/connextus_textlogoW.svg" alt="ConneXtus" width="150">
+                </div>
+                <div class="callbtn_icon">
+                    <img src="/images/ux/Connextus_logoSmall_whiteborder1.svg" alt="Logo" width="30" style="border: 2px solid #ffffff; border-radius:5px">
+                </div>
             </div>
-
+        </a>
+        </div>
             <div class="clear"></div>
         </div>
-        <!-- -->
-        <div class="container ">
+
+        <div class="container P-2vh">
             <div class="flexxer just-around align-center">
                 <a href="https://www.linkedin.com/shareArticle?mini=true&url=card.connextusnow.com%2F" target="_blank"
                     class="">
-                    <img src="http://www.connextusnow.com/connextus_app/img/SM/Connextus_linkedinLogo.svg"
+                    <img src="/images/sm/Connextus_linkedinLogo.svg"
                         alt="Linkedin" width="20px">
                 </a>
-                <a href="profile_sm2" target="_blank" class="">
-                    <img src="http://www.connextusnow.com/connextus_app/img/SM/Connextus_instagramLogo.svg" alt=""
+                <a href="" target="_blank" class="">
+                    <img src="/images/sm/Connextus_instagramLogo.svg" alt=""
                         width="20px">
                 </a>
                 <a href="https://www.facebook.com/sharer.php?u=card.connextusnow.com%2F"
                     target="_blank" class="">
-                    <img src="http://www.connextusnow.com/connextus_app/img/SM/Connextus_facebookLogo.svg" alt=""
+                    <img src="/images/sm/Connextus_facebookLogo.svg" alt=""
                         width="20px">
                 </a>
                 <a href="https://twitter.com/intent/tweet?text=ConneXtusisagreattooltomeetbusinessaquantancies!&url=alt.connextusnow.com" target="_blank">
-                    <img src="http://www.connextusnow.com/connextus_app/img/SM/Connextus_twitterLogo.svg" alt=""
+                    <img src="/images/sm/Connextus_twitterLogo.svg" alt=""
                         width="25px">
                 </a>
+                
             </div>
             <div class="clear"></div>
-        </div>
-        <!-- -->
+          </div>
+         
+         </div>
+    
     </main>
-        <!-- END OF CONNECTUS APP -->
-
-
 
 @endsection
+
+
