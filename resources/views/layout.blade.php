@@ -9,13 +9,14 @@
     <link href="{{url('owl.carousel.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ url('owl.theme.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ url('swipebox.css') }}" rel="stylesheet" type="text/css">
--->    
+
     <link rel="stylesheet" href="{{ url('css/site.css') }}">
     <link href="styles/modals.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ url('css/framework.css') }}">
     <link rel="stylesheet" href="{{ url('css/style.css') }}">
     <link rel="stylesheet" href="{{ url('css/media-queries.css') }}">
-
+-->    
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     @include('partials/header')
