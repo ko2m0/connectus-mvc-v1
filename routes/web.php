@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\BandbController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BandbController;
 use App\Http\Controllers\GuitarsController;
+use App\Http\Controllers\MeetingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,15 @@ Route::get('/store', function () {
     $category = strip_tags(request('category')); 
     return 'you are viewing' . ($category);
 });
+
+/* Route::get('/mail', function () {
+    Mail::to(users:'kozmopimp@gmail.com')
+        ->send(new App\Mail\meetingForm);
+    
+    return 'Email Sent';
+});
+*/  
+
+
+// Route::get('/card', [MeetingController::class, 'contactForm']);
+// Route::put('/card', [MeetingController::class, 'storeMeetingForm'])->name('meetingForm.store');

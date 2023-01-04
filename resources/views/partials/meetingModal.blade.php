@@ -14,6 +14,7 @@
         <div class="decoration"></div>
         <div class="modal-body">
             <div class="contact-form no-bottom">
+                <!-- 
                 <div class="formSuccessMessageWrap" id="formSuccessMessageWrap">
                     <div class="big-notification green-notification">
                         <h3 class="uppercase">Message Sent </h3>
@@ -22,8 +23,11 @@
                             you!</p>
                     </div>
                 </div>
+            -->
     
-                <form action="/php/meet_db.php" method="post" class="meetingForm" id="meetingForm">
+                <form action="" method="POST" class="meetingForm" id="meetingForm">
+                    @csrf
+                    @method('PUT')
                     <fieldset>
                         <!--
                         <div class="formValidationError" id="contactNameFieldError">
@@ -50,32 +54,34 @@
                         <div class="formFieldWrap">
                             <label class="field-title meetingNameField" for="meetingNameField">
                                 First and last name:<span> (required)</span></label>
-                            <input type="text" name="meetingNameField" value="" placeholder="John Smith" class="contactField requiredField"
-                                id="meetingNameField" />
+                            <input type="text" name="meetingNameField" value="" placeholder="John Smith" class="contactField requiredField"/>
+                                @if ($errors->has('meetingNameField'))
+                                            <span class="text-danger">{{ $errors->first('meetingNameField') }}</span>
+                                @endif
                         </div>
                         <div class="formFieldWrap">
                             <label class="field-title meetingEmailField" for="meetingEmailField">Email:
                                 <span> (required)</span></label>
                             <input type="email" name="meetingEmailField" value="" placeholder="joe@mycompany.com"
-                                class="contactField requiredField requiredEmailField" id="meetingEmailField" />
+                                class="contactField requiredField requiredEmailField"  />
                         </div>
                         <div class="formFieldWrap">
                             <label class="field-title meetingPhoneField" for="meetingPhoneField">Phone
                                 Number: </label>
                             <input type="tel" name="meetingPhoneField" value="" placeholder="XXX XXX XX XX"
-                                class="contactField requiredField requiredEmailField" id="meetingPhoneField" />
+                                class="contactField requiredField requiredEmailField"  />
                         </div>
                         <div class="formFieldWrap">
                             <label class="field-title meetingDateField" for="meetingDateField">Date you&apos;d like to meet:
                                 <span>(required)</span></label>
                             <input type="datetime-local" name="meetingDateField" value=""
-                                class="contactField requiredField meetingDateField" id="meetingDateField" />
+                                class="contactField requiredField meetingDateField"  />
                         </div>
                         <div class="formTextareaWrap">
                             <label class="field-title meetingMsg" for="meetingMsg">Comment:
                                 </label>
                             <textarea name="meetingMsg" class="contactTextarea requiredField"
-                                id="meetingMsg"></textarea>
+                                ></textarea>
                         </div>
                         <input type="hidden" id="txtUrl" name="txtUrl" value="" />
                         <script>document.getElementById('txtUrl').value = window.location.href;</script>

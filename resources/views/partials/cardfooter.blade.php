@@ -1,6 +1,6 @@
 <footer class="footerSection">
     <div class="footer">
-      <p>Copyright &copy; 2022 ConneXtus</p>
+      <p>Copyright &copy; {{now()->year}} ConnecTus</p>
       <!--<small>Privacy Policy</small>
       <small>Terms & Conditions</small>
       
