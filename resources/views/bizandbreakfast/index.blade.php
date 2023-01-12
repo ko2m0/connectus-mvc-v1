@@ -1,37 +1,25 @@
-@extends('layout')
+@extends('/bizandbreakfast/layout')
 
 
 @section('content')
 
     @if (count($bandb_profile) > 0 )
 
+    <div class="lg:grid lg:grid-cols-2  gap-4 space-y-4 md:space-y-0 mx-4">
+
 
     @foreach ($bandb_profile as $bandb_profile)
-        <h3>
-            <a href="{{ route('bizandbreakfast.show', ['bizandbreakfast' => $bandb_profile['id']])}}">
-            {{$bandb_profile['profile_name']}}
-            </a>
-        </h3>
-        <ul>
-            <li>
-                <p>{{$bandb_profile['profile_name']}}</p>
-            </li>
-            <li>
-                <p>{{$bandb_profile['profile_job']}}</p>
-            </li>
-            <li>
-                <p>{{$bandb_profile['profile_ws']}}</p>
-            </li>
-            <li>
-                <p>{{$bandb_profile['profile_about']}}</p>
-            </li>
-            <li>
-                <p>{{$bandb_profile['profile_phonenumber']}}</p>
-            </li>
-            <li>
-                <p>{{$bandb_profile['profile_email']}}</p>
-            </li>  
-        </ul>
+
+    
+
+        <a href="{{ route('bizandbreakfast.show', ['bizandbreakfast' => $bandb_profile['id']])}}" class="block  p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$bandb_profile['profile_name']}}</h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">{{$bandb_profile['profile_job']}}</p>
+            <p>{{$bandb_profile['profile_ws']}}</p>
+        </a>
+
+
+        
     @endforeach
 
     @else 

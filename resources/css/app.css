@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+.btn{
+    @apply shadow-md py-3 px-6 rounded-md transition duration-300;
+}
+
+.btn-unus{
+    @apply bg-connectus-blue text-albus;
+}
+
+.btn-duo{
+    @apply bg-connectus-orange text-albus;
+}
+
+.border-test{
+    border: 1px dashed red;
+}
