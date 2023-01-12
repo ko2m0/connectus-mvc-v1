@@ -33,14 +33,6 @@ Route::get('/store', function () {
     return 'you are viewing' . ($category);
 });
 
-/* Route::get('/mail', function () {
-    Mail::to(users:'kozmopimp@gmail.com')
-        ->send(new App\Mail\meetingForm);
-    
-    return 'Email Sent';
-});
-*/  
+Route::post('meeting', [MeetingController::class, 'store'])->name('meeting.store');
 
-
-// Route::get('/card', [MeetingController::class, 'contactForm']);
-// Route::put('/card', [MeetingController::class, 'storeMeetingForm'])->name('meetingForm.store');
+Route::get('meeting/show', [MeetingController::class, 'show'])->name('meeting.show');

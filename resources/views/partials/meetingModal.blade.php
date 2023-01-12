@@ -25,9 +25,8 @@
                 </div>
             -->
     
-                <form action="" method="POST" class="meetingForm" id="meetingForm">
+                <form action="{{ route('meeting.store')}}" method="POST" class="meetingForm" id="meetingForm">
                     @csrf
-                    @method('PUT')
                     <fieldset>
                         <!--
                         <div class="formValidationError" id="contactNameFieldError">
@@ -55,27 +54,36 @@
                             <label class="field-title meetingNameField" for="meetingNameField">
                                 First and last name:<span> (required)</span></label>
                             <input type="text" name="meetingNameField" value="" placeholder="John Smith" class="contactField requiredField"/>
-                                @if ($errors->has('meetingNameField'))
-                                            <span class="text-danger">{{ $errors->first('meetingNameField') }}</span>
-                                @endif
+                                @error('meetingNameField')
+                                <small>*{{$message}}</small>
+                                @enderror
                         </div>
                         <div class="formFieldWrap">
                             <label class="field-title meetingEmailField" for="meetingEmailField">Email:
                                 <span> (required)</span></label>
-                            <input type="email" name="meetingEmailField" value="" placeholder="joe@mycompany.com"
+                            <input type="email" name="meetingEmailField" value="{{old('meetingEmailField')}}" placeholder="joe@mycompany.com"
                                 class="contactField requiredField requiredEmailField"  />
+                                @error('meetingEmailField')
+                                <small>*{{$message}}</small>
+                                @enderror
                         </div>
                         <div class="formFieldWrap">
                             <label class="field-title meetingPhoneField" for="meetingPhoneField">Phone
                                 Number: </label>
                             <input type="tel" name="meetingPhoneField" value="" placeholder="XXX XXX XX XX"
                                 class="contactField requiredField requiredEmailField"  />
+                                @error('meetingPhoneField')
+                                <small>*{{$message}}</small>
+                                @enderror
                         </div>
                         <div class="formFieldWrap">
                             <label class="field-title meetingDateField" for="meetingDateField">Date you&apos;d like to meet:
                                 <span>(required)</span></label>
                             <input type="datetime-local" name="meetingDateField" value=""
                                 class="contactField requiredField meetingDateField"  />
+                                @error('meetingDateField')
+                                <small>*{{$message}}</small>
+                                @enderror
                         </div>
                         <div class="formTextareaWrap">
                             <label class="field-title meetingMsg" for="meetingMsg">Comment:

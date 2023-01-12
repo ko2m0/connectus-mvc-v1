@@ -37,26 +37,26 @@ class MeetingController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+
+        $request->validate([
             'meetingNameField' => 'required',
             'meetingEmailField' => 'required',
             'meetingPhoneField' => 'required',
             'meetingDateField' => 'required',
-            'meetingMsg' => 'required',
-        ]);
+        ]); 
 
-        $meet = new Meeting;
+
+        $meet = new Meeting();
 
         $meet->meetingNameField = $request->input('meetingNameField');
         $meet->meetingEmailField = $request->input('meetingEmailField');
         $meet->meetingPhoneField = $request->input('meetingPhoneField');
         $meet->meetingDateField = $request->input('meetingDateField');
         $meet->meetingMsg = $request->input('meetingMsg');
-
+        
         $meet->save();
 
-        return redirect('card')->with('sucess', 'Saved data');
-
+        return redirect()->route('meeting.show');
 
     }
 
@@ -66,9 +66,11 @@ class MeetingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Meeting $meet)
     {
-        //
+        return view('meeting.show', [
+            'meetingdata' => $meet
+        ]);
     }
 
     /**

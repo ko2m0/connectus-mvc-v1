@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MeetingFormTable extends Migration
+class Meetings extends Migration
 {
     /**
      * Run the migrations.
@@ -23,6 +23,7 @@ class MeetingFormTable extends Migration
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -32,5 +33,4 @@ class MeetingFormTable extends Migration
     {
         Schema::dropIfExists('meetings');
     }
-}
-
+};

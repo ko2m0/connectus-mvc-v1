@@ -11,22 +11,15 @@
 <body>
     <div class="w-full overflow-hidden">
         
-        @include('partials/header')
-
-        @include('partials/homelayout/hero')
+        @include('partials/biznbreakfast/header')
     
-        @include('partials/homeLayout/features')
 
-        @include('partials/homeLayout/bigDescription')
-
-        @include('partials/homeLayout/clients')
-
-    <main class="w-full max-w-screen-xl mx-auto p-4">
+    <main class="w-full max-w-screen-xl mx-auto lg:my-20">
         @yield('content')
     </main>
     
 
-    @include('partials/footer')
+    @include('partials/biznbreakfast/footer')
 
     </div>
 </body>
