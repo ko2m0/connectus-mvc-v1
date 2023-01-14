@@ -14,7 +14,7 @@
         @include('partials/biznbreakfast/header')
     
 
-    <main class="w-full max-w-screen-xl mx-auto lg:my-20">
+    <main class="w-full max-w-screen-xl mx-auto lg:my-20 my-10">
         @yield('content')
     </main>
     
