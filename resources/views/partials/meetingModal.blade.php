@@ -53,7 +53,7 @@
                         <div class="formFieldWrap">
                             <label class="field-title meetingNameField" for="meetingNameField">
                                 First and last name:<span> (required)</span></label>
-                            <input type="text" name="meetingNameField" value="" placeholder="John Smith" class="contactField requiredField"/>
+                            <input type="text" name="meetingNameField" value="{{old('meetingNameField')}}" placeholder="John Smith" class="contactField requiredField"/>
                                 @error('meetingNameField')
                                 <small>*{{$message}}</small>
                                 @enderror
@@ -70,7 +70,7 @@
                         <div class="formFieldWrap">
                             <label class="field-title meetingPhoneField" for="meetingPhoneField">Phone
                                 Number: </label>
-                            <input type="tel" name="meetingPhoneField" value="" placeholder="XXX XXX XX XX"
+                            <input type="tel" name="meetingPhoneField" value="{{old('meetingPhoneField')}}" placeholder="XXX XXX XX XX"
                                 class="contactField requiredField requiredEmailField"  />
                                 @error('meetingPhoneField')
                                 <small>*{{$message}}</small>
@@ -79,7 +79,7 @@
                         <div class="formFieldWrap">
                             <label class="field-title meetingDateField" for="meetingDateField">Date you&apos;d like to meet:
                                 <span>(required)</span></label>
-                            <input type="datetime-local" name="meetingDateField" value=""
+                            <input type="datetime-local" name="meetingDateField" value="{{old('meetingDateField')}}"
                                 class="contactField requiredField meetingDateField"  />
                                 @error('meetingDateField')
                                 <small>*{{$message}}</small>
