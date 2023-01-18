@@ -13,7 +13,7 @@
         
         @include('partials/header')
 
-        @include('partials/homelayout/hero')
+        @include('partials/homeLayout/hero')
     
         @include('partials/homeLayout/features')
 

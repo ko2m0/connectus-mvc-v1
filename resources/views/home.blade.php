@@ -6,7 +6,7 @@
 @endsection
 
 
-@section('title', "Home")
+@section('title', "ConnectUs Networking ::")
 
 
 
