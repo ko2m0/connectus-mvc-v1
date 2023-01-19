@@ -2,7 +2,8 @@
     <!-- NAV BAR -->
     <nav class="container flex items-center py-4">
       <div class="py-1">
-        <img src="{{URL('/images/')}}" alt="BizAndBreakfast logo" style="width: 85%">
+        <img src="{{URL('/images/')}}" alt="BizAndBreakfast logo" style="width: 85%" class="hidden">
+        <h1 class="text-2xl font-Manrope font-bold">Biz & Breakfast</h1>
       </div>
       <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase text-xs">
         <li class="cursor-pointer">Button 1</li>

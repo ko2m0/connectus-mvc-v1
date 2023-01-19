@@ -12,18 +12,9 @@
     <div class="w-full overflow-hidden">
         
         @include('partials/header')
-
-        @include('partials/homeLayout/hero')
     
-        @include('partials/homeLayout/features')
 
-        @include('partials/homeLayout/bigDescription')
-
-        @include('partials/homeLayout/clients')
-
-        @include('partials/homeLayout/pricing')
-
-    <main class="w-full max-w-screen-xl mx-auto p-4">
+    <main class="w-full max-w-screen-xl mx-auto lg:my-20 my-10">
         @yield('content')
     </main>
     

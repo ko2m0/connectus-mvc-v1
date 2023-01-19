@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .btn{
     @apply shadow-md py-3 px-6 rounded-md transition duration-300;
+    font-family: "Manrope"
 }
 
 .btn-unus{
-    @apply bg-connectus-blue text-albus;
+    @apply bg-connectus-blue text-albus font-semibold;
 }
 
 .btn-duo{
-    @apply bg-connectus-orange text-albus;
+    @apply bg-connectus-orange text-albus font-semibold;
 }
 
 .border-test{

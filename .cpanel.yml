@@ -4,8 +4,8 @@ deployment:
     - export DEPLOYPATH=/home/err6yvtj98u5/connectus-mvc-v2
     - /bin/cp -r * $DEPLOYPATH #copy all from root
     - /bin/cp -r ./public/* --exclude 'index.php' $DEPLOYPATH/public_html/
-    - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/js
-    - /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/css
+    #- /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/js
+    #- /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/css
 
 
 #    - export DEPLOYPATH=/home/err6yvtj98u5/public_html/
